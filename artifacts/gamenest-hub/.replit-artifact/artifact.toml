@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "GameNest Hub"
+version = "1.0.0"
+id = "artifacts/gamenest-hub"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 23097
+
+[services.development]
+run = "pnpm --filter @workspace/gamenest-hub run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/gamenest-hub", "run", "build" ]
+publicDir = "artifacts/gamenest-hub/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "23097"
+BASE_PATH = "/"

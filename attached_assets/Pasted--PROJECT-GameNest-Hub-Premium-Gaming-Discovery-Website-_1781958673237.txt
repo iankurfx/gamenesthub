@@ -1,0 +1,463 @@
+# PROJECT: GameNest Hub – Premium Gaming Discovery Website
+
+Create a fully responsive, modern, premium-quality gaming website called "GameNest Hub".
+
+The website should look like a combination of Steam, Pinterest, Netflix, and a modern gaming dashboard.
+
+DO NOT create a simple website.
+
+The final design should feel premium, futuristic, interactive, and visually impressive.
+
+---
+
+# DESIGN SYSTEM
+
+## Theme
+
+Dark futuristic gaming theme.
+
+Background:
+
+* Pure Black (#050505)
+* Secondary Black (#0A0A0A)
+* Dark Gray (#111111)
+
+Primary Accent:
+
+* Neon Purple (#8B5CF6)
+
+Secondary Accent:
+
+* Bright Violet (#A855F7)
+
+Glow Color:
+
+* Purple glow shadows
+* Violet blur effects
+
+Text Colors:
+
+* White (#FFFFFF)
+* Light Gray (#BDBDBD)
+* Purple Highlights
+
+---
+
+# VISUAL STYLE
+
+The entire website should feel alive.
+
+Add:
+
+* Smooth scrolling
+* Hover animations
+* Magnetic buttons
+* Glow effects
+* Animated borders
+* Floating particles
+* Mouse-follow lighting effect
+* Fade-in sections
+* Slide-up animations
+* Blur glassmorphism cards
+* Premium shadows
+* Interactive UI elements
+
+The website should look like a startup-funded gaming platform.
+
+---
+
+# NAVIGATION BAR
+
+Sticky navbar.
+
+Transparent glass effect.
+
+Left Side:
+
+* GameNest Hub logo
+
+Center:
+
+* Home
+* Trending
+* Games
+* About Us
+
+Right Side:
+
+* Discord icon button
+* Instagram icon button
+
+Effects:
+
+* Hover glow
+* Smooth transitions
+* Active page indicator
+* Blur backdrop
+
+Navbar should remain visible while scrolling.
+
+---
+
+# HERO SECTION
+
+Full-screen hero section.
+
+Center everything.
+
+Large bold title:
+
+GameNest Hub
+
+Typography should be massive and futuristic.
+
+Apply:
+
+* Purple glowing text effect
+* Animated gradient
+* Subtle floating animation
+
+Below title:
+
+"Discover. Install. Play."
+
+Small description:
+
+Explore multiplayer experiences, game guides, setup tutorials, system requirements, and trending gaming content in one place.
+
+Buttons:
+
+Primary:
+Explore Games
+
+Secondary:
+Join Community
+
+Buttons must have:
+
+* Hover scaling
+* Glow effect
+* Ripple animation
+
+Background:
+
+Add animated purple particles.
+
+Add blurred glowing circles.
+
+Create a premium gaming atmosphere.
+
+---
+
+# FEATURE SECTION
+
+Show 4 premium feature cards.
+
+Cards:
+
+Game Guides
+
+Trending Games
+
+System Requirements
+
+Community Support
+
+Cards should:
+
+* Glow on hover
+* Lift upward
+* Display icons
+* Glassmorphism style
+
+---
+
+# TRENDING GAMES PAGE
+
+Create dedicated page.
+
+Layout inspired by:
+
+Pinterest + Netflix
+
+Use masonry style grid.
+
+Different card heights.
+
+Cards contain:
+
+* Game Cover
+* Title
+* Category
+* Rating
+* Small Description
+
+Hover Effects:
+
+* Zoom cover image
+* Purple border glow
+* Floating animation
+* View Details button
+
+Grid should automatically adapt to desktop, tablet, and mobile.
+
+---
+
+# GAME DETAILS PAGE
+
+When a user clicks any game card:
+
+Open a beautiful full-screen page.
+
+Layout:
+
+Left Side:
+Large Game Poster
+
+Right Side:
+Game Information
+
+Include:
+
+Game Title
+
+Description
+
+Genre
+
+Developer
+
+Release Date
+
+Platform
+
+Multiplayer Support
+
+Game Size
+
+System Requirements
+
+Minimum Specs
+
+Recommended Specs
+
+Features List
+
+Installation Guide Section
+
+Screenshots Gallery
+
+Related Games Carousel
+
+Add beautiful section dividers.
+
+---
+
+# DOWNLOAD BUTTON
+
+Create large premium button.
+
+Text:
+
+Download Now
+
+Button should:
+
+* Pulse animation
+* Purple glow
+* Hover scaling
+
+IMPORTANT:
+
+The destination URL should be stored inside a configuration variable.
+
+Example:
+
+DOWNLOAD_URL = "#"
+
+This allows changing links later without editing multiple files.
+
+Clicking button redirects user to configured URL.
+
+---
+
+# ABOUT PAGE
+
+Create dedicated About page.
+
+Include:
+
+Who We Are
+
+Our Mission
+
+Gaming Community Focus
+
+Why Choose Us
+
+Statistics Section
+
+Animated Counters:
+
+Games Listed
+
+Monthly Visitors
+
+Guides Published
+
+Community Members
+
+Add timeline section.
+
+Add modern cards.
+
+---
+
+# COMMUNITY SECTION
+
+Create Discord invitation section.
+
+Display:
+
+Join Our Gaming Community
+
+Add:
+
+* Discord button
+* Instagram button
+* Social media cards
+
+Use animated glow borders.
+
+---
+
+# SEARCH SYSTEM
+
+Create advanced search bar.
+
+Users can search:
+
+* Game Title
+* Genre
+* Category
+
+Add:
+
+Live search results
+
+Instant filtering
+
+Smooth animations
+
+---
+
+# FILTER SYSTEM
+
+Add filters:
+
+Action
+
+Adventure
+
+Racing
+
+Horror
+
+Multiplayer
+
+Open World
+
+FPS
+
+RPG
+
+Strategy
+
+Cards should update dynamically.
+
+---
+
+# FOOTER
+
+Premium footer.
+
+Include:
+
+Logo
+
+Quick Links
+
+Discord
+
+Instagram
+
+About
+
+Copyright
+
+Animated divider line
+
+Social icons
+
+Hover effects
+
+---
+
+# PERFORMANCE
+
+Optimize everything.
+
+Requirements:
+
+* Fast loading
+* Lazy loaded images
+* Responsive design
+* SEO friendly structure
+* Clean component architecture
+* Modern code standards
+
+---
+
+# RESPONSIVENESS
+
+Must work perfectly on:
+
+Desktop
+
+Tablet
+
+Mobile
+
+No broken layouts.
+
+---
+
+# EXTRA PREMIUM FEATURES
+
+Add:
+
+Custom cursor glow
+
+Page transitions
+
+Loading screen animation
+
+Skeleton loading cards
+
+Back-to-top button
+
+Animated background particles
+
+Purple ambient lighting effects
+
+Modern toast notifications
+
+Smooth route transitions
+
+Interactive hover states
+
+Micro interactions everywhere
+
+Premium gaming aesthetic throughout the entire experience.
+
+The final result should feel like a professional gaming platform rather than a simple website.
