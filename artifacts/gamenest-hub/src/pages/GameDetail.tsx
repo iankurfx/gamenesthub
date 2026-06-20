@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { useParams, Link } from "wouter";
 import { motion } from "framer-motion";
-import { Download, ArrowLeft, Star, Monitor, HardDrive, Cpu, Layers } from "lucide-react";
+import { Download, ArrowLeft, Star, Monitor, HardDrive, Cpu, Layers, PlayCircle } from "lucide-react";
 import { toast } from "sonner";
 import { games } from "@/data/games";
 import { DOWNLOAD_URL } from "@/config";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
 import GameCard from "@/components/GameCard";
+import AdBanner from "@/components/AdBanner";
 import BackToTop from "@/components/ui/BackToTop";
 
 export default function GameDetail() {
@@ -53,7 +53,6 @@ export default function GameDetail() {
       exit={{ opacity: 0 }}
       className="min-h-screen bg-background"
     >
-      <CustomCursor />
       <Navbar />
 
       {/* Hero Poster */}
@@ -96,12 +95,21 @@ export default function GameDetail() {
           </h1>
 
           <div className="flex flex-col sm:flex-row gap-4">
-            <button 
+            <button
+              data-testid="button-download"
               onClick={handleDownload}
-              className="px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 box-glow flex items-center justify-center gap-3 group"
+              className="px-8 py-4 bg-primary text-white rounded-xl font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 box-glow flex items-center justify-center gap-3 group animate-pulse-slow"
             >
               <Download className="w-6 h-6 group-hover:-translate-y-1 transition-transform" />
               <span>Download Now</span>
+            </button>
+            <button
+              data-testid="button-install-video"
+              onClick={() => toast.info("Opening installation guide video...", { description: `Watch how to install ${game.title}` })}
+              className="px-8 py-4 glass-panel border border-secondary/40 text-secondary rounded-xl font-bold text-lg hover:bg-secondary/10 hover:border-secondary/70 transition-all hover:scale-105 flex items-center justify-center gap-3 group"
+            >
+              <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
+              <span>Installation Guide Video</span>
             </button>
           </div>
         </div>
@@ -237,6 +245,9 @@ export default function GameDetail() {
                 ))}
               </ol>
             </div>
+
+            {/* Sidebar ad */}
+            <AdBanner size="sidebar" />
           </div>
         </div>
 

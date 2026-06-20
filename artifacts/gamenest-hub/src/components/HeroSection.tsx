@@ -1,42 +1,70 @@
 import { motion } from "framer-motion";
 import { Link } from "wouter";
 import { ArrowRight, Play } from "lucide-react";
+import { games } from "@/data/games";
+
+const HERO_CARDS = games.slice(0, 7);
+
+const FLOAT_POSITIONS = [
+  { top: "8%", left: "2%", rotate: -8, delay: 0 },
+  { top: "55%", left: "1%", rotate: 6, delay: 0.8 },
+  { top: "20%", right: "2%", rotate: 10, delay: 0.4 },
+  { top: "65%", right: "1%", rotate: -6, delay: 1.2 },
+  { top: "5%", left: "18%", rotate: 4, delay: 0.6 },
+  { top: "75%", right: "16%", rotate: -4, delay: 1.0 },
+  { bottom: "5%", left: "8%", rotate: 7, delay: 1.4 },
+];
 
 export default function HeroSection() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
-      {/* Background Effects */}
+      {/* Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-background" />
         <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-        
+
         {/* Glowing Orbs */}
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" style={{ animationDuration: '4s' }} />
         <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-secondary/10 rounded-full blur-[150px] mix-blend-screen animate-pulse" style={{ animationDuration: '6s', animationDelay: '1s' }} />
-        
-        {/* Particles (CSS driven for simplicity/performance per requirements) */}
-        {Array.from({ length: 20 }).map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-1 h-1 bg-primary/50 rounded-full box-glow"
-            initial={{
-              x: Math.random() * (typeof window !== 'undefined' ? window.innerWidth : 1000),
-              y: Math.random() * (typeof window !== 'undefined' ? window.innerHeight : 1000),
-              opacity: Math.random() * 0.5 + 0.3
-            }}
-            animate={{
-              y: [null, Math.random() * -200 - 100],
-              opacity: [null, 0]
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              ease: "linear"
-            }}
-          />
-        ))}
       </div>
 
+      {/* Floating Game Cards */}
+      {HERO_CARDS.map((game, i) => {
+        const pos = FLOAT_POSITIONS[i];
+        return (
+          <motion.div
+            key={game.id}
+            className="absolute z-[1] hidden md:block"
+            style={{ ...pos } as React.CSSProperties}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: pos.delay }}
+          >
+            <motion.div
+              animate={{ y: [0, -14, 0] }}
+              transition={{ duration: 4 + i * 0.4, repeat: Infinity, ease: "easeInOut", delay: pos.delay }}
+              className="w-28 lg:w-36 rounded-xl overflow-hidden border border-primary/30 shadow-[0_0_24px_rgba(139,92,246,0.35)] glass-panel"
+              style={{ transform: `rotate(${pos.rotate}deg)` }}
+            >
+              <img
+                src={game.coverImage}
+                alt={game.title}
+                className="w-full aspect-[3/4] object-cover opacity-80"
+                loading="lazy"
+              />
+              <div className="px-2 py-1.5 bg-black/60 backdrop-blur-md">
+                <p className="text-white text-[10px] font-bold truncate">{game.title}</p>
+                <div className="flex items-center gap-1 mt-0.5">
+                  <span className="text-primary text-[9px] font-semibold">{game.genre}</span>
+                  <span className="ml-auto text-yellow-400 text-[9px] font-bold">{game.rating}</span>
+                </div>
+              </div>
+            </motion.div>
+          </motion.div>
+        );
+      })}
+
+      {/* Center Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center">
           <motion.div
@@ -83,14 +111,20 @@ export default function HeroSection() {
             className="flex flex-col sm:flex-row items-center gap-6"
           >
             <Link href="/games">
-              <button className="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 box-glow flex items-center gap-3 w-full sm:w-auto justify-center group">
+              <button
+                data-testid="button-explore-games"
+                className="px-8 py-4 bg-primary text-white rounded-lg font-bold text-lg hover:bg-primary/90 transition-all hover:scale-105 box-glow flex items-center gap-3 w-full sm:w-auto justify-center group"
+              >
                 <Play className="w-5 h-5 fill-white" />
                 <span>Explore Games</span>
               </button>
             </Link>
-            
+
             <Link href="/about">
-              <button className="px-8 py-4 glass-panel border border-white/20 text-white rounded-lg font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center group hover-glow">
+              <button
+                data-testid="button-join-community"
+                className="px-8 py-4 glass-panel border border-white/20 text-white rounded-lg font-bold text-lg hover:bg-white/10 hover:border-primary/50 transition-all hover:scale-105 flex items-center gap-3 w-full sm:w-auto justify-center group hover-glow"
+              >
                 <span>Join Community</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>

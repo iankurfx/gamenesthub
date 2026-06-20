@@ -1,14 +1,14 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import HeroSection from "@/components/HeroSection";
 import FeatureCards from "@/components/FeatureCards";
 import CommunitySection from "@/components/CommunitySection";
 import GameCard from "@/components/GameCard";
+import AdBanner from "@/components/AdBanner";
 import { games } from "@/data/games";
 import { Link } from "wouter";
 import { ArrowRight } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
 import BackToTop from "@/components/ui/BackToTop";
 
 export default function Home() {
@@ -21,11 +21,15 @@ export default function Home() {
       exit={{ opacity: 0 }}
       className="min-h-screen"
     >
-      <CustomCursor />
       <Navbar />
-      
+
       <HeroSection />
-      
+
+      {/* Ad banner below hero */}
+      <div className="container mx-auto px-6 py-4">
+        <AdBanner size="leaderboard" />
+      </div>
+
       <FeatureCards />
 
       {/* Trending Preview Section */}
@@ -37,7 +41,7 @@ export default function Home() {
               <p className="text-muted-foreground max-w-2xl text-lg">The most played and highly rated games this week.</p>
             </div>
             <Link href="/trending">
-              <button className="flex items-center gap-2 text-primary hover:text-white font-bold transition-colors group">
+              <button data-testid="link-view-trending" className="flex items-center gap-2 text-primary hover:text-white font-bold transition-colors group">
                 <span>View All Trending</span>
                 <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </button>
@@ -49,11 +53,16 @@ export default function Home() {
               <GameCard key={game.id} game={game} index={index} />
             ))}
           </div>
+
+          {/* Mid-page ad */}
+          <div className="mt-16">
+            <AdBanner size="leaderboard" />
+          </div>
         </div>
       </section>
 
       <CommunitySection />
-      
+
       <Footer />
       <BackToTop />
     </motion.div>

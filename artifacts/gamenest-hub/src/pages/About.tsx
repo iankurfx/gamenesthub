@@ -3,7 +3,6 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
-import CustomCursor from "@/components/ui/CustomCursor";
 import BackToTop from "@/components/ui/BackToTop";
 import { Shield, Zap, Globe, Heart } from "lucide-react";
 
@@ -54,7 +53,6 @@ export default function About() {
       exit={{ opacity: 0 }}
       className="min-h-screen pt-24"
     >
-      <CustomCursor />
       <Navbar />
 
       <main>
