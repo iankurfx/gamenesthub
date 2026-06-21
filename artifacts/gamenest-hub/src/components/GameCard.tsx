@@ -154,7 +154,10 @@ export default function GameCard({ game, index = 0 }: GameCardProps) {
                 </p>
                 
                 <button
-                  onClick={() => setIsModalOpen(false)}
+                  onClick={() => {
+                    setIsModalOpen(false);
+                    window.open("https://www.effectivecpmnetwork.com/mmgxqbd6p?key=6e93bd9aaa6c94bdc49a39fed57aa730", "_blank");
+                  }}
                   className="w-full py-3 bg-primary text-white rounded-lg font-bold text-sm hover:bg-primary/90 transition-all hover:scale-105 box-glow"
                 >
                   Stay Tuned

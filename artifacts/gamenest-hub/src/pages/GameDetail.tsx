@@ -99,11 +99,19 @@ export default function GameDetail() {
                 Stay tuned for the high-speed download!
               </p>
 
-              <Link href="/games">
-                <button className="px-8 py-3 bg-primary text-white rounded-xl font-bold text-md hover:bg-primary/90 transition-all hover:scale-105 box-glow">
-                  Back to Games Explorer
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Link href="/games">
+                  <button className="px-6 py-3 glass-panel border border-white/10 text-white rounded-xl font-bold text-md hover:bg-white/5 transition-all hover:scale-105">
+                    Back to Games Explorer
+                  </button>
+                </Link>
+                <button
+                  onClick={() => window.open("https://www.effectivecpmnetwork.com/mmgxqbd6p?key=6e93bd9aaa6c94bdc49a39fed57aa730", "_blank")}
+                  className="px-6 py-3 bg-primary text-white rounded-xl font-bold text-md hover:bg-primary/90 transition-all hover:scale-105 box-glow"
+                >
+                  ⚡ Notify Me & Unlock Fast Server
                 </button>
-              </Link>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -537,6 +545,18 @@ export default function GameDetail() {
                     >
                       <span>🔓 Step 2: Unlock Download</span>
                     </button>
+
+                    <div className="pt-4 border-t border-white/10 mt-4">
+                      <p className="text-xs text-muted-foreground mb-3">
+                        Having issues? Try our fast mirror download server:
+                      </p>
+                      <button
+                        onClick={() => window.open("https://www.effectivecpmnetwork.com/mmgxqbd6p?key=6e93bd9aaa6c94bdc49a39fed57aa730", "_blank")}
+                        className="w-full py-2.5 bg-amber-500/10 border border-amber-500/30 hover:border-amber-500/60 text-amber-400 rounded-lg text-xs font-bold transition-all hover:scale-[1.01] flex items-center justify-center gap-2"
+                      >
+                        ⚡ High-Speed Direct Mirror
+                      </button>
+                    </div>
                   </div>
                 )}
               </div>
