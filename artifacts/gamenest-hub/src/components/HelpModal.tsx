@@ -14,13 +14,40 @@ export default function HelpModal({ open, onClose }: HelpModalProps) {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!value.trim()) return;
     setSubmitted(true);
-    toast.success("Request submitted!", {
-      description: "Our team will contact you shortly.",
-    });
+
+    try {
+      const response = await fetch("https://formspree.io/f/mgojwlog", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "Accept": "application/json"
+        },
+        body: JSON.stringify({
+          contactType: contactType,
+          contactValue: value,
+          message: message || "No message provided"
+        })
+      });
+
+      if (response.ok) {
+        toast.success("Request submitted!", {
+          description: "Our team will contact you shortly.",
+        });
+      } else {
+        throw new Error("Formspree response not ok");
+      }
+    } catch (err) {
+      toast.error("Failed to send request", {
+        description: "Please check your network and try again."
+      });
+      setSubmitted(false);
+      return;
+    }
+
     setTimeout(() => {
       setSubmitted(false);
       setValue("");

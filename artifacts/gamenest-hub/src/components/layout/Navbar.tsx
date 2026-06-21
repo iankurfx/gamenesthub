@@ -80,7 +80,7 @@ export default function Navbar() {
               <SiDiscord className="w-4 h-4" />
             </a>
             <a
-              href="https://instagram.com"
+              href="https://www.instagram.com/gamenesthub2/"
               target="_blank"
               rel="noreferrer"
               data-testid="link-instagram"

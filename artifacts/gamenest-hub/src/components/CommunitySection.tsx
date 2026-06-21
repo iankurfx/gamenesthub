@@ -57,7 +57,7 @@ export default function CommunitySection() {
             </motion.a>
 
             <motion.a
-              href="https://instagram.com"
+              href="https://www.instagram.com/gamenesthub2/"
               target="_blank"
               rel="noreferrer"
               initial={{ opacity: 0, scale: 0.9 }}

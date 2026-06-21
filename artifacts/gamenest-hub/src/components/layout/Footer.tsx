@@ -57,7 +57,7 @@ export default function Footer() {
                 <SiDiscord className="w-5 h-5" />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://www.instagram.com/gamenesthub2/"
                 target="_blank"
                 rel="noreferrer"
                 className="w-10 h-10 rounded-full flex items-center justify-center bg-white/5 hover:bg-primary/20 text-muted-foreground hover:text-primary transition-all duration-300 hover-glow"

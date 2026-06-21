@@ -118,6 +118,16 @@ export default function GameDetail() {
 
   const downloadUrl = game.downloadUrl || DOWNLOAD_URL;
 
+  const handleWatchVideo = () => {
+    if (game.id === "Meccha Chameleon") {
+      window.open("https://youtu.be/tZLPSS9NwJc", "_blank");
+    } else {
+      toast.info("Video publish soon...", {
+        description: `The installation video for ${game.title} will be available soon.`
+      });
+    }
+  };
+
   const handleDownload = () => {
     if (isRequiredToSubscribe) {
       setHasClickedSubscribe(false);
@@ -257,7 +267,7 @@ export default function GameDetail() {
             </button>
             <button
               data-testid="button-install-video"
-              onClick={() => toast.info("Opening installation guide video...", { description: `Watch how to install ${game.title}` })}
+              onClick={handleWatchVideo}
               className="px-8 py-4 glass-panel border border-secondary/40 text-secondary rounded-xl font-bold text-lg hover:bg-secondary/10 hover:border-secondary/70 transition-all hover:scale-105 flex items-center justify-center gap-3 group"
             >
               <PlayCircle className="w-6 h-6 group-hover:scale-110 transition-transform" />
