@@ -10,11 +10,9 @@ interface MasonryGridProps {
 export default function MasonryGrid({ games, isLoading = false }: MasonryGridProps) {
   if (isLoading) {
     return (
-      <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
-        {[1, 2, 3, 4, 5, 6].map((i) => (
-          <div key={i} className="mb-6 break-inside-avoid">
-            <div className={`glass-panel rounded-xl animate-pulse bg-white/5 border border-white/10 ${i % 3 === 0 ? 'h-[500px]' : i % 2 === 0 ? 'h-[400px]' : 'h-[300px]'}`}></div>
-          </div>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10].map((i) => (
+          <div key={i} className="glass-panel rounded-xl animate-pulse bg-white/5 border border-white/10 h-[220px]"></div>
         ))}
       </div>
     );
@@ -37,10 +35,11 @@ export default function MasonryGrid({ games, isLoading = false }: MasonryGridPro
   }
 
   return (
-    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
       {games.map((game, index) => (
         <GameCard key={game.id} game={game} index={index} />
       ))}
     </div>
   );
 }
+

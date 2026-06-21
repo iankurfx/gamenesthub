@@ -1,0 +1,82 @@
+<USER_REQUEST>
+OKAY LISTEN ON THE FIRST 12 BOXES ADD THIS DATA TILL FEATURES....REST INSTALLATION AND ALL SHOULD BE SAME AND IN TAGS FEATURES IN EVERY BOX PUT #TRENDING id: "Meccha Chameleon",
+title: "Meccha Chameleon",
+genre: "Casual",
+category: "Trending",
+rating: 8.5,
+description: "Paint yourself to blend in in this hide-and-seek party game. Players paint their white chameleon bodies to mimic the stage and deceive seekers.",
+fullDescription: "\"Paint yourself to blend in! Meccha Chameleon is a hide-and-seek game where you paint your white body to mimic the stage. Spot, pose, and 'artistic skill' are keys to survival. Deceive seekers with techniques that put chameleons to shame!\"",
+developer: "lemorion_1224",
+releaseDate: "Jun 9, 2026",
+platform: ["PC"],
+multiplayer: true,
+gameSize: "Not specified",
+minSpecs: { os: "Windows 10", cpu: "Intel Core i5", ram: "Not specified", gpu: "DirectX 11/12 compatible", storage: "Not specified" },
+recSpecs: {},
+features: ["Multiplayer", "Party Game", "Comedy", "Stealth"],
+
+id: "R.E.P.O.",
+title: "R.E.P.O.",
+genre: "Action",
+category: "Trending",
+rating: 9.6,
+description: "An online co-op horror game where you and up to 6 players locate valuable physics-based objects and extract them.",
+fullDescription: "\"An online co-op horror game with up to 6 players. Locate valuable, fully physics-based objects and handle them with care as you retrieve and extract to satisfy your creator's desires.\"",
+developer: "semiwork",
+releaseDate: "Feb 26, 2025",
+platform: ["PC"],
+multiplayer: true,
+gameSize: "1 GB",
+minSpecs: { os: "Windows 10", cpu: "Intel Core i5-6600", ram: "8 GB", gpu: "GeForce GTX 970", storage: "1 GB" },
+recSpecs: { os: "Windows 11", cpu: "Intel Core i7 8700", ram: "8 GB", gpu: "GeForce GTX 1070", storage: "1 GB" },
+features: ["Horror", "Co-op", "First-Person", "Physics"],
+
+id: "Frog Sqwad",
+title: "Frog Sqwad",
+genre: "Action",
+category: "Trending",
+rating: 7.3,
+description: "Up to 8 player co-op extraction puzzle-platformer where frogs swing, jump, and grow by eating.",
+fu
+<truncated 6376 bytes>
+ the sky.\"",
+developer: "Cyberwave",
+releaseDate: "Jun 8, 2026",
+platform: ["PC"],
+multiplayer: true,
+gameSize: "5 GB",
+minSpecs: { os: "Windows 10/11", cpu: "Intel Core i5-8400", ram: "6 GB", gpu: "GeForce GTX 1660", storage: "5 GB" },
+recSpecs: { os: "Windows 11", cpu: "Intel Core i7", ram: "8 GB", gpu: "NVIDIA RTX 3060", storage: "5 GB" },
+features: ["Open World", "Crafting", "Survival", "Co-op"],
+
+id: "Oblin Party",
+title: "Oblin Party",
+genre: "Action",
+category: "Trending",
+rating: 9.3,
+description: "A physics-based 2D party brawler where you control elastic arms to swing, slingshot, and beat friends in chaotic local or online multiplayer.",
+fullDescription: "\"Oblin Party is a physics-based 2D party brawler where you have direct control over your two hands. You can use your elastic arms to swing, slingshot, and parkour around the highly dynamic and chaotic maps. Outwit your friends and force them off the map to secure your victory!\"",
+developer: "Tellus Games",
+releaseDate: "Mar 11, 2025",
+platform: ["PC"],
+multiplayer: true,
+gameSize: "1 GB",
+minSpecs: { os: "Windows 10", cpu: "Intel Core i5", ram: "4 GB", gpu: "GeForce GTX 1050", storage: "1 GB" },
+recSpecs: {},
+features: ["Physics", "Party Game", "Local Multiplayer", "2D"]
+}
+
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-06-21T03:01:45+05:30.
+
+The user's current state is as follows:
+Active Document: c:\Users\ankur\OneDrive\Desktop\W GRAPHICS DESIGN\new game nest\GameNest-Hub\artifacts\gamenest-hub\src\data\games.ts (LANGUAGE_TYPESCRIPT)
+Cursor is on line: 117
+Other open documents:
+- c:\Users\ankur\OneDrive\Desktop\W GRAPHICS DESIGN\new game nest\GameNest-Hub\artifacts\gamenest-hub\src\data\games.ts (LANGUAGE_TYPESCRIPT)
+- c:\Users\ankur\OneDrive\Desktop\W GRAPHICS DESIGN\new game nest\GameNest-Hub\package.json (LANGUAGE_JSON)
+Browser State:
+  Page 207F029211C3CD79E9946AC556F4432F (Vantage widget) - https://vantage.csw.lenovo.com/v1/web/containerwidget/default/ [ACTIVE]
+    Viewport: 16x16, Page Height: 16
+</ADDITIONAL_METADATA>

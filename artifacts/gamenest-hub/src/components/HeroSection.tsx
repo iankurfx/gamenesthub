@@ -29,20 +29,21 @@ export default function HeroSection() {
       {/* Floating Game Cards */}
       {HERO_CARDS.map((game, i) => {
         const pos = FLOAT_POSITIONS[i];
+        const { delay, rotate, ...styleProps } = pos;
         return (
           <motion.div
             key={game.id}
             className="absolute z-[1] hidden md:block"
-            style={{ ...pos } as React.CSSProperties}
+            style={styleProps as React.CSSProperties}
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: pos.delay }}
+            transition={{ duration: 1, delay }}
           >
             <motion.div
               animate={{ y: [0, -14, 0] }}
-              transition={{ duration: 4 + i * 0.4, repeat: Infinity, ease: "easeInOut", delay: pos.delay }}
+              transition={{ duration: 4 + i * 0.4, repeat: Infinity, ease: "easeInOut", delay }}
               className="w-28 lg:w-36 rounded-xl overflow-hidden border border-primary/30 shadow-[0_0_24px_rgba(139,92,246,0.35)] glass-panel"
-              style={{ transform: `rotate(${pos.rotate}deg)` }}
+              style={{ transform: `rotate(${rotate}deg)` }}
             >
               <img
                 src={game.coverImage}
